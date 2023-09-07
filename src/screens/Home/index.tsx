@@ -16,6 +16,10 @@ export default function Home() {
     alert('adicionar')
   }
 
+  function removeParticipant() {
+    alert('remover')
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>
@@ -44,9 +48,10 @@ export default function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant name="John Doe" />
-      <Participant name="Maria do Bairro" />
-      <Participant name="Shakira" />
+      <Participant 
+        name="John Doe" 
+        onRemove={removeParticipant}
+    />
     </View>
   );
 }
