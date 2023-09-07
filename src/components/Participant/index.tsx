@@ -7,11 +7,15 @@ import {
 import { styles } from "./styles";
 import { AntDesign } from '@expo/vector-icons'; 
 
-export default function Participant() {
+type Props = {
+    name: string;
+}
+
+export default function Participant({ name }: Props) {
     return (
         <View style={styles.container}>
             <Text style={styles.name}>
-                John Doe
+                {name}
             </Text>
 
             <TouchableOpacity style={styles.button}>
