@@ -8,6 +8,8 @@ import {
 import  { styles } from './styles';
 import { AntDesign } from '@expo/vector-icons'; 
 
+import Participant from '../../components/Participant'
+
 export default function Home() {
 
   function addParticipant() {
@@ -41,6 +43,10 @@ export default function Home() {
             </AntDesign>
         </TouchableOpacity>
       </View>
+
+      <Participant />
+      <Participant />
+      <Participant />
     </View>
   );
 }
