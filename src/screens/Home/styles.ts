@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
 
     eventName: {
         marginTop: 48,
-        color: '#FDFCFE',
+        color: '#FFF',
         fontSize: 24,
         fontWeight: 'bold'
     },
@@ -17,5 +17,15 @@ export const styles = StyleSheet.create({
     eventDate: {
         color: '#6B6B6B',
         fontSize: 16
+    },
+
+    input: {
+        marginTop: 10,
+        padding: 16,
+        height: 54,
+        fontSize: 16,
+        color: '#FFF',
+        backgroundColor: '#1F1E25',
+        borderRadius: 5
     }
 });
