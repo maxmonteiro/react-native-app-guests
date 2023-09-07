@@ -24,21 +24,23 @@ export default function Home() {
         Quinta, 7 de Setembro de 2023
       </Text>
 
-      <TextInput 
-        style={styles.input} 
-        placeholder='Nome do participante'
-        placeholderTextColor='#686868'
-      />
+      <View style={styles.form}>
+        <TextInput 
+            style={styles.input} 
+            placeholder='Nome do participante'
+            placeholderTextColor='#686868'
+        />
 
-      <TouchableOpacity 
-        style={styles.button}
-        onPress={addParticipant}
-      >
-        <AntDesign 
-            name='plus' 
-            style={styles.buttonText}>
-        </AntDesign>
-      </TouchableOpacity>
+        <TouchableOpacity 
+            style={styles.button}
+            onPress={addParticipant}
+        >
+            <AntDesign 
+                name='plus' 
+                style={styles.buttonText}>
+            </AntDesign>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
