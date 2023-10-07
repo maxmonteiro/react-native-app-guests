@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { 
   Text, 
   View,
@@ -13,15 +14,14 @@ import { AntDesign } from '@expo/vector-icons';
 import Participant from '../../components/Participant'
 
 export default function Home() {
-const participants = [
-  'Teste 1', 'Teste 2', 'Teste 3', 'Teste 4', 'Teste 5', 'Teste 6', 
-  'Teste 7', 'Teste 8', 'Teste 9'
-]
+const [participants, setParticipants] = useState(['João'])
 
 function addParticipant() {
   if (participants.includes('Teste 1')) {
     return Alert.alert('Participante Existe', 'Já existe um participante com esse nome')
   }
+
+  setParticipants(prevState => [...prevState, 'Ana'])
 }
 
 function removeParticipant(name: string) {
