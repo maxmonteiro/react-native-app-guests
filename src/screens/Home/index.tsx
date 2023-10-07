@@ -14,7 +14,8 @@ import { AntDesign } from '@expo/vector-icons';
 import Participant from '../../components/Participant'
 
 export default function Home() {
-const [participants, setParticipants] = useState(['João'])
+const [participants, setParticipants] = useState<string[]>([])
+
 
 function addParticipant() {
   if (participants.includes('Teste 1')) {
