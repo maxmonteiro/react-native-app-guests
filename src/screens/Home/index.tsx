@@ -15,14 +15,15 @@ import Participant from '../../components/Participant'
 
 export default function Home() {
 const [participants, setParticipants] = useState<string[]>([])
-
+const [participantName, setParticipantName] = useState('')
 
 function addParticipant() {
-  if (participants.includes('Teste 1')) {
+  if (participants.includes(participantName)) {
     return Alert.alert('Participante Existe', 'Já existe um participante com esse nome')
   }
 
-  setParticipants(prevState => [...prevState, 'Ana'])
+  setParticipants(prevState => [...prevState, participantName])
+  setParticipantName('')
 }
 
 function removeParticipant(name: string) {
@@ -55,6 +56,8 @@ return (
           style={styles.input} 
           placeholder='Nome do participante'
           placeholderTextColor='#686868'
+          value={participantName}
+          onChangeText={text => setParticipantName(text)}
       />
 
       <TouchableOpacity 
