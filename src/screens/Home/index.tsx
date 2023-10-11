@@ -31,7 +31,7 @@ function removeParticipant(name: string) {
     'Remover', `Confirmar exclusão do participante: ${name}?`,[
       {
         text: 'Sim',
-        onPress: () => Alert.alert('Participante excluído!')
+        onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== name))
       },
       {
         text: 'Não',
